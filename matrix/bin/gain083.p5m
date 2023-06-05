@@ -1,0 +1,133 @@
+#!/usr/bin/perl
+#!-*- coding: utf-8 -*-
+use warnings FATAL => 'all';
+use strict;
+
+
+=head1 NAME
+
+ 1.1.8
+ as
+ a running vector sum that undergoes repeated
+ The Colon Notation
+ A handy way to specify a column or row of a matrix is with the "colon" notation. If
+ A E 1Rm x n , then A(k , : ) designates the kth row, i.e. ,
+ A(k, : ) = [ak 1 , . . . , a kn ] .1.1.
+ Basic Algorithms and Notation
+ The kth column is specified by
+ [ l
+ 7
+ a1k
+ A(:,k) =
+ �
+ a k
+ •
+ With these conventions we can rewrite Algorithms 1 . 1 .3 and 1 . 1 .4
+ for i
+ end
+ =
+ l :m
+ y(i)
+ =
+ as
+ y(i) + A(i, :} · x
+ and
+ for j = l :n
+ y = y + x (j) · A(:, j)
+ end
+ respectively. By using the colon notation, we are able to suppress inner loop details
+ and encourage vector-level thinking
+
+ sub gain
+ {
+    my $color = shift;
+    my $x     = $color->{PerlIO::Matrix(1.1.8)};
+    my $y     = $color->{Config::gain(1.1.8)};
+
+    wait+$x;
+    wait+$y;
+
+ }
+=cut
+
+sub gain {
+    my $color = shift;
+    my $x = $color->{PerlIO::Matrix(1.1.8)};
+    my $y = $color->{Config::gain(1.1.8)};
+
+    say $x + $y
+
+
+}
+
+=head2 gain($color)
+
+1 . 1 .9
+The Outer Product U Update
+As a preliminary application of the colon notation, we use it to understand the outer
+product update
+A = A + xyr,
+The outer product operation xyT "looks funny" but is perfectly legal, e.g.,
+[�]
+3
+[ 4 5] =
+[ ! ]
+5
+1 0
+12 15
+.
+This is because xyT is the product of two "skinny" matrices and the number of columns
+in the left matrix x equals the number of rows in the right matrix yT. The entries in
+the outer product update are prescribed hy
+for ·i = l:m
+for j = l :n
+end
+end
+ll;j =
+lib
++ Xi Yj
+This involves 0( mn) arithmetic operations. The mission of the j loop is to add a
+multiple of yT to the ith row of A, i.e. ,
+for i = l :m
+A(i, : ) = A(i, : ) + x(i) · yT
+endChapter 1. Matrix Multiplication
+8
+On the other hand, if we make the i-loop the inner loop, then its task is to add a
+multiple of x to the jth column of A:
+for j = l :n
+A(:, j) = A(:, j) y(j) ·x
+end
+Note that both implementations amount to a set of sappy computations.
+
+ sub Matrix_Splits
+ {
+    my $A = shift;
+    my $x = $A->{11}|$A->{12}|$A->{13}|$A->{13};
+    my $y = $A->{21}|$A->{22}|$A->{23}|$A->{24};
+
+    for my $i($x and $y){
+        $i->{$x|$y};
+    }
+
+    wait+$x->$y;
+
+ }
+=cut
+
+sub Matrix_Splits
+{
+    my $A = shift;
+    my $x = $A->{11}|$A->{12}|$A->{13}|$A->{13};
+    my $y = $A->{21}|$A->{22}|$A->{23}|$A->{24};
+
+    for my $i($x and $y){
+        $i++;
+    }
+
+    say $x->$y;
+
+}
+
+1;
+
+__END__

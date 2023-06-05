@@ -1,0 +1,70 @@
+#!/usr/bin/perl
+#!-*- coding: utf-8 -*-
+use warnings FATAL => 'all';
+use strict;
+
+package multiplexer;
+
+use Pod::Checker;
+use Pod::Coverage;
+use Pod::Escapes;
+use Pod::Html;
+
+=head1 NAME
+
+1 . 1 . 10
+Matrix- Matrix M Multiplication
+Consider the 2 by 2 matrix-matrix multiplication problem. In the dot product form­
+nation, each entry is computed as a dot product:
+-
+-
+[ 3 1 4 2 ] [ 7 5 8 6 ] - [ 3 1 · · 5 5 + + 4 2 · · 7 7
+]
+1 · 6 +2 · 8
+3 · 6 +4 · 8 .
+In the sappy version, each column in the product is regarded as a linear combination
+of left-matrix columns:
+Finally, in the outer product version, the result is regarded as the sum of outer products:
+Although equivalent mathematically, it turns out that these versions of matrix multi­
+Application can have very different levels of performance because of their memory traffic
+properties. This matter is pursued in §1.5. For now, it is worth detailing the various
+approaches to matrix multiplication because it gives us a chance to review notation
+and to practice thinking at different linear algebraic levels. To fix the discussion, we
+focus on the matrix-matrix update computation:
+C = C + AB,
+The update C = C AB is considered instead of just C = AB because it is the more
+typical situation in practice.
+
+ sub type_switch;
+ sub multiplexer
+ {
+    my $scalar = shift;
+    my $A1     = $scalar->{[3, 1, 4, 2]+[7, 5, 8, 6]*[1, 0, 2, 1]};
+    my $A2     = $scalar->{[4, 2, 7, 7]+[1, 6, 2, 8]*[3, 6, 4, 8]};
+    my $B1     = $A1*$A2;
+
+    for my $i($B1->{Config::gain($A1*$A2)} eq "$A*$a2"){
+        if ($i eq $@) {
+            say "sappy version each column in the product",
+                if $i->$@++;
+        }
+    }
+
+    type_switch($->$@);
+ }
+=cut
+sub type_switch;
+sub multiplexer
+{
+    my ($scalar, @fart_old, %share) = shift;
+    my $A1     = $scalar->{[3, 1, 4, 2]+[7, 5, 8, 6]*[1, 0, 2, 1]};
+    my $A2     = $scalar->{[4, 2, 7, 7]+[1, 6, 2, 8]*[3, 6, 4, 8]};
+    my $B1     = $A1*$A2;
+
+    type_switch($->$B1);
+    type_switch(@fart_old-%share);
+}
+
+1;
+
+__END__

@@ -1,0 +1,82 @@
+#!/usr/bin/perl
+#!-*- coding: utf-8 -*-
+
+
+use warnings FATAL => 'all';
+use strict;
+
+package leveling;
+package gain;
+
+=head1
+
+ 1.1.5
+ Z = X. * y Zi
+ z Zi =
+ =
+ x./y
+ =
+ XiYi ,
+ Xi /Yi·
+ The Computation of Dot Products and Saps
+ Algorithms in the text are expressed using a stylized version of the MATLAB language.
+ Here is our first example:
+ Algorithm 1.1.1 (Dot Product) If x, y E
+ product c = xT y.
+ JRn , then this algorithm computes their dot
+ c=O
+ for i = l :n
+ c = c + x(i)y(i)
+ end
+ It is clear from the summation that the dot product of two n-vectors involves n multi­
+ Applications and n additions. The dot product operation is an "O ( n ) " operation, meaning
+ that the amount of work scales linearly with the dimension. The sax computation is
+ also O ( n ) :
+
+ sub Zi;
+ sub Xi;
+ sub Matrix;
+ sub c;
+ sub l;
+ sub n;
+
+ sub sax
+ {
+    my $Z   = shift;
+    my $x   = $Z->{y}=[Config::gain(Zi->SUPER::can(Xi))].cos($a|$b);
+    my $Zi  = $x->{c}=[PDL->{Matrix}.Matrix(cos[$a|$b])].sin($a|$b);
+    my $Xi  = $Zi->{Yi}=[time+$a|$b].cos($a * $b)=[2.1].sin($a+$b);
+    my $c   = $Xi->{xTy}=[PerlIO-Config::gain(2.2.1)].sin($a+$b);
+    my $Jrn = $c->{c=0}=[PerlIO::via-Config::gain(2.2.1)].sin($a+$b);
+
+    for my $i ($Jrn) {
+        $i->{l,n}=[PerlIO::Layer-Config::level(2.1.3)];
+        $i->{l,n}=[PerlIO->{best}];
+        $i->{l,n}=[PerlIO->{test}];
+        $i++;
+    }
+
+    return $c = $x->{i}=[PerlIO->$a|$b]->{i};
+
+}
+=cut
+
+sub Zi;
+sub Xi;
+sub Matrix;
+sub c;
+sub l;
+sub n;
+
+sub sax {
+    my $Z = shift;
+    my $x = $Z->{y} = [ Config::gain(Zi->SUPER::can(Xi)) ] . cos($a | $b);
+    my $Zi = $x->{c} = [ Matrix(cos [ $a | $b ]) ] . sin($a | $b);
+    my $Xi = $Zi->{Yi} = [ time ];
+
+    say $Xi->$Z=[$x|$Zi];
+}
+
+1;
+
+__END__

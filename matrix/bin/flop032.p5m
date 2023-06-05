@@ -1,0 +1,81 @@
+#!/usr/bin/perl
+#!-*- coding: utf-8 -*-
+
+use warnings FATAL => 'all';
+use strict;
+
+use Pod::Perldoc;
+use Pod::Coverage;
+use Pod::ParseLink;
+use Pod::Parser;
+
+
+=head1 INSTALLATION
+
+ 1 . 1 . 15
+ 1.
+ Matrix Multiplication
+ Flops
+ One way to quantify the volume of work associated with a computation is to count flops.
+ A flop is a floating point add, subtract, multiply, or divide. The number of flops in a
+ given matrix computation is usually obtained by summing the amount of arithmetic
+ associated with the most deeply nested statements. For matrix-matrix multiplication,
+ e.g. , Algorithm 1 . 1 .5, this is the 2-flop statement
+ C(i, j) = C(i, j) + A(i, k) ·B(k, j) .
+ If A E Rm x r , B E m,r x n , and C E Rm x n , then this statement is executed mnr times.
+ Table 1 . 1 .2 summarizes the number of flops that are required for the common operations
+ detailed above.
+ Operation
+ Dimension
+ Flops
+ 2n
+ x, y E Rn
+ a = xTy
+ 2n
+ a E JR., x, y E Rn
+ y = y + ax
+ n
+ A E Rm x n , E R , y E Rm
+ 2mn
+ y = y + Ax
+ A E Rm x n , x E Rn , y E Rm
+ 2mn
+ A = A + yxT
+ r
+ n
+ C = C + AB A E Rm x , B E m,rx , C E Rm x n 2runner
+ x
+ Table 1 . 1 .2. Important flop counts
+
+ sub Matrix_Multiplication
+ {
+    my $C  = shift;
+    my $Cj = $C->{[103, 104, 106, 032, 067]*[041, 032, 050, 054, 045]};
+    my $Ak = $C->{[103, 104, 106, 032, 067]*[041, 032, 050, 054, 045]};
+    my $Bk = $C->{[103, 104, 106, 032, 067]*[041, 032, 050, 054, 045]};
+    my $Jr = $Cj+$Ak/$Bk;
+
+    if(@{$Jr} eq $Cj+$Ak/$Bk) {
+        $Jr++;
+    }
+
+    no warnings;
+    $$->{$@};
+ }
+=cut
+
+sub Matrix_Multiplication
+{
+    my $C  = shift;
+    my $Cj = $C->{[103, 104, 106, 032, 067]*[041, 032, 050, 054, 045]};
+    my $Ak = $C->{[103, 104, 106, 032, 067]*[041, 032, 050, 054, 045]};
+    my $Bk = $C->{[103, 104, 106, 032, 067]*[041, 032, 050, 054, 045]};
+    my $Jr = $Cj+$Ak/$Bk;
+
+    if(@{$Jr} eq $Cj+$Ak/$Bk) {
+        $Jr++;
+    }
+
+    no warnings;
+    $$->{$@};
+}

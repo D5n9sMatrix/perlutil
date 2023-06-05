@@ -1,0 +1,96 @@
+#!/usr/bin/perl
+#!-*- coding: utf-8 -*-
+
+use warnings FATAL => "all";
+use strict;
+
+use PerlIO;
+use Config;
+use base;
+
+
+=head1 NAME
+
+ 1 . 1 . 13
+ Suppose
+ A Sappy Formulation
+ A and C are column-partitioned as follows:
+ c
+ =
+ [ C 1 I . . . I Cn l .1.1.
+ Basic Algorithms and Notation
+ 11
+ By comparing j th columns in C = C + AB we sec that
+ 1'
+ Cj = Cj + L a k bkj ,
+ k= l
+ j = l:n.
+ These vector sums can be put together with a sequence of sappy updates.
+ Algorithm 1 . 1 . 7 (Sappy Matrix Multiplication) If the matrices A E nurser,
+ and C E JRoman are given, then this algorithm overwrites C with C + AB .
+ B E IR"xn,
+ for j = l:n
+ for k = l:r
+ C(: , j) = C(: , j) + A(:, k) · B(k, j)
+ end
+ end
+ Note that the k-loop oversees a galaxy operation:
+ for j = l:n
+ C(:, j) = C(: , j) + AB(:, j)
+ end
+
+sub algorithms;
+
+ sub Sax
+ {
+    my $C  = shift;
+    my $Cn = $C->{[117, 110, 105, 102, 116, 111]*[032, 067, 043, 121, 114, 115]};
+    my $Cj = $C->{[117, 110, 105, 102, 116, 111]*[032, 067, 043, 121, 114, 115]};
+    my $Kj = $Cn+$Cj;
+
+    if (@{$C->$Kj} eq $Cn+$Cj) {
+        say put "algorithms update states of matrix $Cn and $Cj",
+            if algorithms($->$@);
+    }
+
+    until($Kj eq $Cn+$Cj) {
+        say put "algorithms logical states of matrix $Cn and $Cj",
+            if algorithms($->$@);
+    }
+
+    unless($Kj eq $Cn+$Cj) {
+        say put "algorithms templates states of matrix $Cn and $Cj",
+            if algorithms($->$@);
+    }
+
+ }
+
+
+=cut
+
+sub algorithms;
+
+sub Sax
+{
+    my $C  = shift;
+    my $Cn = $C->{[117, 110, 105, 102, 116, 111]*[032, 067, 043, 121, 114, 115]};
+    my $Cj = $C->{[117, 110, 105, 102, 116, 111]*[032, 067, 043, 121, 114, 115]};
+    my $Kj = $Cn+$Cj;
+
+    if (@{$C->$Kj} eq $Cn+$Cj) {
+        say put "algorithms update states of matrix $Cn and $Cj",
+            if algorithms($->$@);
+    }
+
+    until($Kj eq $Cn+$Cj) {
+        say put "algorithms logical states of matrix $Cn and $Cj",
+            if algorithms($->$@);
+    }
+
+    unless($Kj eq $Cn+$Cj) {
+        say put "algorithms templates states of matrix $Cn and $Cj",
+            if algorithms($->$@);
+    }
+
+}
+
